@@ -39,7 +39,7 @@ Este projeto está em **construção** e pode estar sujeito a mudanças frequent
    ```
 
 4. **Abra no navegador:**
-   O projeto estará disponível em `http://localhost:3000`.
+   O projeto estará disponível em `http://localhost:3000` ou em `http://localhost:5173`.
 
 ## 📦 Tecnologias Utilizadas
 

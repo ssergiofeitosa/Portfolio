@@ -2,8 +2,9 @@
 const Contact = () => {
   return (
     <>
-      <section id="contact" className="bg-white dark:bg-gray-950">
-        <div className="  border-1 rounded-md drop-shadow-lg border-gray-400 py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+    
+      <section id="contact" className="bg-white dark:bg-gray-950 rounded-md border-2 border-gray-400 sm:min-h-screen flex items-center lg:min-h-[80%] lg:w-[60%]">
+        <div className=" w-full border-1 rounded-md drop-shadow-lg  py-8  px-4 mx-auto max-w-screen-md">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
             Entre em Contato
           </h2>
@@ -51,7 +52,7 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
-                rows={6}
+                rows={10}
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Escreva sua mensagem..."
               ></textarea>

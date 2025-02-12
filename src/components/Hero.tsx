@@ -4,7 +4,7 @@ import { GithubLogo,LinkedinLogo } from "phosphor-react";
 const Hero =()=>{
     return (
       <>
-        <div id="home" className="h-screen text-white flex flex-col items-center gap-2 py-[140px]">
+        <div id="home" className="h-screen text-white flex flex-col items-center gap-2 pt-[220px]">
           <img
             className="text-white rounded-full"
             src={eu}

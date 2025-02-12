@@ -22,23 +22,26 @@ const Skills = ()=>{
 
     return (
       <>
-        <section className="py-16 px-4 bg-transparent pt-[160px] pb-[180px]" id="projects">
-  <div className="container mx-auto text-center">
-    <h2 className="text-white text-5xl font-bold mb-8">Projetos Pessoais</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      
-     
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
-      
-      {/* {projetos.map((projeto, index) => (
+        <section
+          className=" px-4 bg-transparent pt-[140px]  pb-[180px]"
+          id="projects"
+        >
+          <div className="container mx-auto text-center">
+            <h2 className="text-white text-5xl font-bold mb-8">
+              Projetos Pessoais
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              <Card></Card>
+              <Card></Card>
+              <Card></Card>
+              <Card></Card>
+
+              {/* {projetos.map((projeto, index) => (
         <Card key={index} />
       ))} */}
-    </div>
-  </div>
-</section>
+            </div>
+          </div>
+        </section>
       </>
     );
 }

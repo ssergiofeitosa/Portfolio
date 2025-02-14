@@ -4,17 +4,19 @@ import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
 function App() {
   return (
     <>
-      <div className=" flex flex-col bg-gray-950 items-center scroll-smooth font-primary ">
-        <Header />
-        <Hero></Hero>
-        <Skills></Skills>
-        <Contact></Contact>
-        <Footer></Footer>
-      </div>
+      
+      
+        <div className=" bg-gray-950 flex flex-col items-center scroll-smooth font-primary ">
+          <Header />
+          <Hero></Hero>
+          <Skills></Skills>
+          <Contact></Contact>
+          <Footer></Footer>
+        </div>
+      
     </>
   );
 }

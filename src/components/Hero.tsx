@@ -18,14 +18,20 @@ const Hero = () => {
         <h1 className="text-5xl font-serif font-bold ">Sérgio Feitosa</h1>
         <h2 className="text-3xl font-normal">Desenvolvedor Front-End</h2>
         <p className="text-2xl px-4 text-center font-thin">
-          Graduando em <span className="italic text-gray-300 font-medium">Engenharia de Computação</span> na Universidade Federal do Vale
-          do São Francisco
+          Graduando em{" "}
+          <span className="italic text-gray-300 font-medium">
+            Engenharia de Computação
+          </span>{" "}
+          na Universidade Federal do Vale do São Francisco
         </p>
         <div className="flex">
-          <a href="https://github.com/ssergiofeitosa">
+          <a href="https://github.com/ssergiofeitosa" target="_blank">
             <GithubLogo size={36} />
           </a>
-          <a href="https://www.linkedin.com/in/francisco-sérgio-feitosa-lima-segundo-874118210/">
+          <a
+            href="https://www.linkedin.com/in/francisco-sérgio-feitosa-lima-segundo-874118210/"
+            target="_blank"
+          >
             <LinkedinLogo size={32} />
           </a>
         </div>

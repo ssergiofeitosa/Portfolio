@@ -24,7 +24,7 @@ const Skills = () => {
       id="projects"
     >
       <div className="container mx-auto text-center">
-        <h2 className="text-white text-5xl font-bold mb-8">
+        <h2 className="text-white text-5xl font-normal mb-8">
           Projetos Pessoais
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

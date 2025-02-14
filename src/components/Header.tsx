@@ -1,38 +1,74 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { UserCircle,HouseSimple,Code } from "phosphor-react";
+import { UserCircle, HouseSimple, Code, List, X } from "phosphor-react";
+
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  
   const menuItems = [
-    { name: "Home", href: "#home",icon : <HouseSimple size={20}></HouseSimple>},
-    { name: "Projetos", href: "#projects", icon: <Code size={20}></Code>},
-    { name: "Contato", href: "#contact", icon: <UserCircle size={20}></UserCircle>},
-    // { name: "Theme Changer", href: "#theme-changer" },
+    { name: "Home", href: "#home", icon: <HouseSimple size={20} /> },
+    { name: "Projetos", href: "#projects", icon: <Code size={20} /> },
+    { name: "Contato", href: "#contact", icon: <UserCircle size={20} /> },
   ];
+
   const scrollToSection = (href: string) => {
     const section = document.querySelector(href);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
-    <header className="fixed top-0 left-0 w-full bg-gray-900/10 backdrop-blur-lg shadow-md z-50 ">
-      <nav className="text-white flex justify-center gap-6 p-4 flex-wrap">
-        {menuItems.map((item, index) => (
-          <motion.a
-            key={index}
-            href={item.href}
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection(item.href);
-            }}
-            whileHover={{ scale: 1.1 }} // efeito ao passar o mouse
-            whileTap={{ scale: 0.9 }} // eefeito ao clicar
-            className="relative flex gap-1 font-light mx-[10px] text-gray-300 hover:text-gray-200 transition-all after:content-[''] after:w-0 after:h-[2px] after:bg-white after:absolute after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
-          >
-            {item.icon}
-            {item.name}
-          </motion.a>
-        ))}
-      </nav>
+    <header className="fixed top-0 left-0 w-full bg-gray-900/10 backdrop-blur-lg shadow-md z-50 p-4 h-14">
+      <div className="flex justify-center items-center max-w-6xl mx-auto">
+        <button className="md:hidden text-white absolute right-4 pt-4" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={28} /> : <List size={36} />}
+        </button>
+        <nav className="hidden md:flex text-white gap-6">
+          {menuItems.map((item, index) => (
+            <motion.a
+              key={index}
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.href);
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="relative flex gap-1 font-light mx-[10px] text-gray-300 hover:text-gray-200 transition-all after:content-[''] after:w-0 after:h-[2px] after:bg-white after:absolute after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
+            >
+              {item.icon}
+              {item.name}
+            </motion.a>
+          ))}
+        </nav>
+      </div>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          className="md:hidden absolute top-14 right-4 bg-white/10 backdrop-blur-lg text-white py-4 px-6 rounded-lg shadow-lg flex flex-col items-start gap-4"
+        >
+          {menuItems.map((item, index) => (
+            <motion.a
+              key={index}
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.href);
+                setIsOpen(false);
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center gap-2 text-lg text-gray-300 hover:text-gray-200"
+            >
+              {item.icon}
+              {item.name}
+            </motion.a>
+          ))}
+        </motion.div>
+      )}
     </header>
   );
 };

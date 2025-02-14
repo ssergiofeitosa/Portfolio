@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className=" w-full h-screen text-white flex flex-col justify-center snap-start items-center gap-6 text-4xl sm:text-3xl md:text-2xl "
+        className=" w-full h-screen text-white flex flex-col justify-center snap-start items-center gap-6  "
       >
         <img
           className="text-white rounded-full"
@@ -15,9 +15,15 @@ const Hero = () => {
           width={120}
           height={160}
         />
-        <h1 className="text-5xl font-serif font-bold "><span className="text-rose-500">{'<'}</span>Sérgio Feitosa<span className="text-rose-500"> {'/>'}</span></h1>
-        <h2 className="text-3xl font-normal"> Desenvolvedor Front-End </h2>
-        <p className="text-2xl px-4 text-center font-thin">
+        <h1 className="sm:text-5xl font-serif font-bold text-4xl  ">
+          <span className="text-rose-500">{"<"}</span> Sérgio Feitosa
+          <span className="text-rose-500"> {"/>"}</span>
+        </h1>
+        <h2 className="sm:text-3xl font-normal text-2xl">
+          {" "}
+          Desenvolvedor Front-End{" "}
+        </h2>
+        <p className="sm:text-2xl px-4 text-center font-thin lg:text-3xl text-2xl">
           Graduando em{" "}
           <span className="italic text-gray-300 font-medium">
             Engenharia de Computação

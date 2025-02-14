@@ -16,7 +16,7 @@ Este projeto está em **construção** e pode estar sujeito a mudanças frequent
 1. **Clone este repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/Portfolio.git
+   git clone https://github.com/ssergiofeitosa/Portfolio.git
    ```
 
 2. **Instale as dependências:**

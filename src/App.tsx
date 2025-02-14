@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className=" flex flex-col bg-gray-950 items-center scroll-smooth">
+      <div className=" flex flex-col bg-gray-950 items-center scroll-smooth font-primary ">
         <Header />
         <Hero></Hero>
         <Skills></Skills>

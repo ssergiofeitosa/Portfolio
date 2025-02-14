@@ -2,13 +2,13 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-white dark:bg-gray-950 rounded-md border-2 min-h-[97%] py-16 w-full flex items-center justify-center mt-[60px]"
+      className="bg-white dark:bg-gray-950 rounded-md border-2 min-h-[97%] py-16 w-full flex items-center justify-center mt-[60px] "
     >
       <div className="w-full max-w-screen-md px-4 py-8 border-1 rounded-md drop-shadow-lg">
         <h2 className="mb-4 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white">
           Entre em Contato
         </h2>
-        <p className="mb-8 lg:mb-16 font-medium text-center text-gray-500 dark:text-slate-100 sm:text-xl">
+        <p className=" mb-8 lg:mb-16 font-medium text-center text-gray-500 dark:text-slate-100 sm:text-xl">
           Precisa de um site ou quer tirar uma ideia do papel? Me chama! Vamos
           conversar e ver como posso te ajudar no seu projeto.
         </p>

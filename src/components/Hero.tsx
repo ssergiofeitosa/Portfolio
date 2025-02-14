@@ -12,13 +12,13 @@ const Hero = () => {
           className="text-white rounded-full"
           src={eu}
           alt=""
-          width={200}
-          height={200}
+          width={120}
+          height={160}
         />
-        <h1 className="text-5xl font-bold">Sérgio Feitosa</h1>
-        <h2 className="text-3xl font-bold">Desenvolvedor Front-End</h2>
-        <p className="text-2xl px-4 text-center">
-          Graduando em Engenharia de Computação na Universidade Federal do Vale
+        <h1 className="text-5xl font-serif font-bold ">Sérgio Feitosa</h1>
+        <h2 className="text-3xl font-normal">Desenvolvedor Front-End</h2>
+        <p className="text-2xl px-4 text-center font-thin">
+          Graduando em <span className="italic text-gray-300 font-medium">Engenharia de Computação</span> na Universidade Federal do Vale
           do São Francisco
         </p>
         <div className="flex">

@@ -16,14 +16,14 @@ Este projeto está em **construção** e pode estar sujeito a mudanças frequent
 1. **Clone este repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/seu-usuario/Portfolio.git
    ```
 
 2. **Instale as dependências:**
    Navegue até a pasta do projeto e instale as dependências usando o `npm` ou `yarn`:
 
    ```bash
-   cd nome-do-repositorio
+   cd Portfolio
    npm install
    # ou
    yarn install

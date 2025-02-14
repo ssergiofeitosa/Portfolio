@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className=" w-full h-screen text-white flex flex-col justify-center snap-start items-center gap-2 text-4xl sm:text-3xl md:text-2xl"
+        className=" w-full h-screen text-white flex flex-col justify-center snap-start items-center gap-6 text-4xl sm:text-3xl md:text-2xl "
       >
         <img
           className="text-white rounded-full"
@@ -15,8 +15,8 @@ const Hero = () => {
           width={120}
           height={160}
         />
-        <h1 className="text-5xl font-serif font-bold ">Sérgio Feitosa</h1>
-        <h2 className="text-3xl font-normal">Desenvolvedor Front-End</h2>
+        <h1 className="text-5xl font-serif font-bold "><span className="text-rose-500">{'<'}</span>Sérgio Feitosa<span className="text-rose-500"> {'/>'}</span></h1>
+        <h2 className="text-3xl font-normal"> Desenvolvedor Front-End </h2>
         <p className="text-2xl px-4 text-center font-thin">
           Graduando em{" "}
           <span className="italic text-gray-300 font-medium">

@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 const Header = () => {
   const menuItems = [
     { name: "Home", href: "#home" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Projetos", href: "#projects" },
+    { name: "Contato", href: "#contact" },
     // { name: "Theme Changer", href: "#theme-changer" },
   ];
   const scrollToSection = (href: string) => {

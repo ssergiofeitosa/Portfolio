@@ -9,7 +9,7 @@ function App() {
     <>
       
       
-        <div className=" bg-gray-950 flex flex-col items-center scroll-smooth font-primary ">
+        <div className="p1 bg-gray-950 flex flex-col items-center scroll-smooth font-primary ">
           <Header />
           <Hero></Hero>
           <Skills></Skills>

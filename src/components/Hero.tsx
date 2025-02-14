@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="w-full h-screen text-white flex flex-col justify-center snap-start items-center gap-2 text-4xl sm:text-3xl md:text-2xl"
+        className=" w-full h-screen text-white flex flex-col justify-center snap-start items-center gap-2 text-4xl sm:text-3xl md:text-2xl"
       >
         <img
           className="text-white rounded-full"

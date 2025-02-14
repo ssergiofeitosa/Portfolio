@@ -1,7 +1,7 @@
 import burguerMania from "../assets/burguermania.png";
 const Card = () => {
     return (
-      <div className= "bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden group hover:scale-105 transform transition-all duration-300 flex flex-col justify-between ">
+      <div className= "border-1 border-black hover:border-rose-500 hover:drop-shadow-2xl hover:border-2 bg-neutral-900 text-white rounded-lg shadow-lg overflow-hidden group hover:scale-105 transform transition-all duration-300 flex flex-col justify-between ">
         {/* <!-- Imagem do projeto --> */}
         <div className="relative w-full h-64">
           <img

@@ -1,24 +1,20 @@
 import "./App.css";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 import Skills from "./components/Skills";
-import Hero from './components/Hero';
-// import Form from './components/Form';
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-
-      <div className="min-h-screen flex flex-col justify-between bg-gray-950 items-center">
+      <div className=" flex flex-col bg-gray-950 items-center scroll-smooth">
         <Header />
         <Hero></Hero>
-        <Skills />
+        <Skills></Skills>
         <Contact></Contact>
         <Footer></Footer>
       </div>
-
-      
     </>
   );
 }

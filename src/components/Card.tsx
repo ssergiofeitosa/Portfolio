@@ -1,34 +1,51 @@
-import burguerMania from "../assets/burguermania.png";
-const Card = () => {
-    return (
-      <div className= "border-1 border-black hover:border-rose-500 hover:border-b-4 hover:drop-shadow-2xl hover:border-2 bg-neutral-900 text-white rounded-lg shadow-lg overflow-hidden group hover:scale-105 transform transition-all duration-300 flex flex-col justify-between ">
-        {/* <!-- Imagem do projeto --> */}
-        <div className="relative w-full h-64">
+interface CardProps {
+  title: string;
+  description: string;
+  image: string;
+  technologies: JSX.Element[];
+}
+
+export default function Card2({
+  title,
+  description,
+  image,
+  technologies,
+}: CardProps) {
+  return (
+    <div className="relative drop-shadow-xl w-[330px] h-[400px] overflow-hidden rounded-xl bg-[#3d3c3d] hover:scale-105 hover:drop-shadow-2xl transform transition-all duration-300 group border-2 border-transparent hover:border-rose-500">
+      {/* efeito de brilho/blur */}
+      <div className="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2 group-hover:opacity-80 transition-opacity duration-300"></div>
+
+      {/* Cont principal */}
+      <div className="absolute flex flex-col justify-between items-center text-white z-[1] opacity-90 rounded-xl inset-0.5 bg-[#323132] p-4 hover:opacity-95 transition-opacity duration-300">
+        {/*  imagem */}
+        <div className=" w-full h-48 mb-4 overflow-hidden rounded-lg">
           <img
-             alt="Burguer Mania"
-            src={burguerMania}
-            className="group-hover:opacity-80 transition-opacity duration-300 rounded-t-lg w-full h-full object-cover"
-            width={200} height={200}
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300 rounded-t-lg"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70 group-hover:opacity-40 transition-opacity duration-300"></div>
         </div>
 
-        {/* <!-- Conteúdo do card --> */}
-        <div className="p-6 flex flex-col flex-grow">
-          <h3 className="text-2xl font-semibold mb-2">Burguer Mania</h3>
-          <p className="text-gray-300 mb-4 text-sm flex-grow">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quas ullam fugiat maiores quisquam incidunt nisi, iusto harum obcaecati repudiandae et illo magnam velit at rerum accusamus provident suscipit sint!
-          </p>
-          <div className="flex justify-between items-center mb-4">
-            <a className="text-gray-400 hover:text-gray-200 transition-colors">
-              {/* <!-- Ícone do GitHub --> */}
-            </a>
-            <div className="flex space-x-2">
-              {/* <!-- Ícones de tecnologias --> */}
-            </div>
-          </div>
+        {/* conteúdo textual */}
+        <div className="flex flex-col items-center text-center flex-grow">
+          <h3 className="text-lg font-bold mb-2">{title}</h3>
+          <p className="text-sm text-gray-300 line-clamp-3">{description}</p>
+        </div>
+
+        {/* icons de tecnologias */}
+        <div className="flex mt-4 space-x-2 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+          {technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="text-xl text-gray-400 hover:text-white transition-colors"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
       </div>
-    );
+    </div>
+  );
 }
-export default Card;

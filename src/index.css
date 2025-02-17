@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-
+@import "@fontsource/inter";
 @theme {
   --font-primary: "Inter", "sans-serif";
 }
 html {
   scroll-behavior: smooth;
 }
-@import "@fontsource/inter";
+
 
 
 /* From Uiverse.io by adamgiebl */ 

@@ -4,7 +4,7 @@ import { UserCircle, HouseSimple, Code, List, X } from "phosphor-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const menuItems = [
     { name: "Home", href: "#home", icon: <HouseSimple size={20} /> },
     { name: "Projetos", href: "#projects", icon: <Code size={20} /> },
@@ -20,11 +20,17 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-900/10 backdrop-blur-lg shadow-md z-50 p-4 h-14">
-      <div className="flex justify-center items-center max-w-6xl mx-auto">
-        <button className="md:hidden text-white absolute right-4 pt-4" onClick={() => setIsOpen(!isOpen)}>
+      <div className="flex justify-between items-center w-full max-w-6xl mx-auto px-4">
+        {/* Botão do menu mobile (escondido em telas grandes) */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <X size={28} /> : <List size={36} />}
         </button>
-        <nav className="hidden md:flex text-white gap-6">
+
+        {/* Menu desktop (centralizado em telas grandes) */}
+        <nav className="hidden md:flex justify-center w-full text-white gap-6">
           {menuItems.map((item, index) => (
             <motion.a
               key={index}
@@ -43,12 +49,14 @@ const Header = () => {
           ))}
         </nav>
       </div>
+
+      {/* Menu mobile */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="md:hidden absolute top-14 right-4 bg-white/10 backdrop-blur-lg text-white py-4 px-6 rounded-lg shadow-lg flex flex-col items-start gap-4"
+          className="md:hidden fixed top-14 left-0 w-full bg-black/85 backdrop-blur-lg text-white py-4 px-6 shadow-lg flex flex-col items-start gap-4"
         >
           {menuItems.map((item, index) => (
             <motion.a

@@ -8,7 +8,7 @@ interface Project {
 }
 
 interface CarouselProps {
-  projects: Project[]; // Recebe projetos via props
+  projects: Project[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ projects }) => {
@@ -18,27 +18,31 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
     setSelected(event.target.id);
   };
 
-  // Função para calcular a posição dos cards
   const getTransform = (index: number) => {
     const selectedIndex = projects.findIndex((p) => p.id === selected);
     const distance = index - selectedIndex;
 
-    if (distance === 0) return "translateX(0) scale(1)"; // Item selecionado
+    if (distance === 0) return "translateX(0) scale(1)";
     if (distance === 1 || distance === -(projects.length - 1))
-      return "translateX(40%) scale(0.8)"; // Direita
+      return "translateX(40%) scale(0.8)";
     if (distance === -1 || distance === projects.length - 1)
-      return "translateX(-40%) scale(0.8)"; // Esquerda
-    return "translateX(0) scale(0)"; // Esconde outros itens
+      return "translateX(-40%) scale(0.8)";
+    return "translateX(0) scale(0)";
   };
 
   return (
-    <div className="flex w-full h-full items-center justify-center p-8 min-h-screen bg-transparent transition-colors duration-700">
+    <div
+      id="projects"
+      className="flex h-full w-full items-center justify-center pt-20 pb-16 px-4 bg-transparent"
+    >
       <div className="w-full max-w-6xl flex flex-col items-center">
-        {" "}
-        {/* Aumentado para max-w-6xl */}
-        <div className="relative w-full h-[500px] mb-5">
-          {" "}
-          {/* Altura aumentada */}
+        <div className="container mx-auto text-center mb-8">
+          <h2 className="text-white text-5xl md:text-4xl lg:text-5xl font-light">
+            Projetos
+          </h2>
+        </div>
+
+        <div className="relative w-full h-[400px] md:h-[500px]">
           {projects.map((project) => (
             <input
               key={project.id}
@@ -50,37 +54,55 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
               className="hidden"
             />
           ))}
+
           <div className="absolute w-full h-full">
             {projects.map((project, index) => (
               <label
                 key={project.id}
                 htmlFor={project.id}
-                className={`absolute w-3/5 h-full left-0 right-0 m-auto transition-all duration-700 ease-in-out cursor-pointer ${
-                  selected === project.id ? "z-10" : "z-0 opacity-40"
+                className={`absolute w-4/5 md:w-3/5 h-full left-0 right-0 m-auto transition-all duration-700 ease-in-out cursor-pointer ${
+                  selected === project.id ? "z-10" : "z-0"
                 }`}
-                style={{
-                  transform: getTransform(index),
-                }}
+                style={{ transform: getTransform(index) }}
               >
-                <div className="relative w-full h-full group">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full rounded-lg object-cover transform group-hover:scale-105 transition-transform duration-300"
-                  />
-                  {/* <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-6 rounded-lg hover:bg-black/40 transition-colors">
-                    <h3 className="text-white text-xl font-bold mb-2">{project.title}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span 
-                          key={tech} 
-                          className="px-3 py-1 text-sm bg-black/30 text-gray-200 rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                {/* Container principal */}
+                <div className="relative w-full h-full flex flex-col">
+                  {/* Container da imagem com altura fixa */}
+                  <div className="h-[70%] md:h-[80%] flex-shrink-0 relative">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className={`w-full h-full rounded-lg object-cover transform transition-transform duration-300 ${
+                        selected === project.id
+                          ? "scale-100"
+                          : "scale-90 opacity-40 blur-xs"
+                      }`}
+                    />
+                  </div>
+
+                  {/* Container de detalhes com crescimento automático */}
+                  <div
+                    className={`flex-grow bg-gray-700 bg-opacity-75 text-white p-3 md:p-4 rounded-md transition-all duration-300 mt-4 ${
+                      selected === project.id
+                        ? "opacity-100 blur-none"
+                        : "opacity-40 blur-xs"
+                    }`}
+                  >
+                    <h3 className="text-base md:text-lg font-bold mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-xs md:text-sm mb-2">
+                      Tecnologias: {project.technologies.join(", ")}
+                    </p>
+                    <div className="text-xs md:text-sm">
+                      <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Alias eveniet illum in laborum omnis assumenda
+                        dolorum ducimus hic vitae. Assumenda porro dolores ipsa
+                        placeat, dicta commodi voluptate ab adipisci quisquam?
+                      </p>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </label>
             ))}

@@ -15,7 +15,7 @@ const Hero = () => {
           width={120}
           height={160}
         />
-        <h1 className="sm:text-5xl font-serif font-bold text-4xl  ">
+        <h1 className="sm:text-5xl  font-light text-4xl  ">
           <span className="text-rose-500">{"<"}</span> Sérgio Feitosa
           <span className="text-rose-500"> {"/>"}</span>
         </h1>
@@ -30,15 +30,24 @@ const Hero = () => {
           </span>{" "}
           na Universidade Federal do Vale do São Francisco
         </p>
-        <div className="flex">
-          <a href="https://github.com/ssergiofeitosa" target="_blank">
+        <div className="flex gap-x-3">
+          {/* adicionar mais icones aqui */}
+          <a
+            href="https://github.com/ssergiofeitosa"
+            target="_blank"
+            className="hover:text-rose-500 transition duration-300"
+          >
             <GithubLogo size={36} />
           </a>
+
           <a
             href="https://www.linkedin.com/in/francisco-sérgio-feitosa-lima-segundo-874118210/"
             target="_blank"
           >
-            <LinkedinLogo size={32} />
+            <LinkedinLogo
+              className="hover:text-rose-500 transition duration-300"
+              size={36}
+            />
           </a>
         </div>
       </section>

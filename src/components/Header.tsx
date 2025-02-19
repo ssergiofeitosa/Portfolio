@@ -39,9 +39,9 @@ const Header = () => {
                 e.preventDefault();
                 scrollToSection(item.href);
               }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="relative flex gap-1 font-light mx-[10px] text-gray-300 hover:text-gray-200 transition-all after:content-[''] after:w-0 after:h-[2px] after:bg-white after:absolute after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.85 }}
+              className="relative flex gap-1 font-light mx-[10px] text-gray-100 hover:text-rose-500 transition-all after:content-[''] after:w-0 after:h-[2px] after:bg-rose-500 after:absolute after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
             >
               {item.icon}
               {item.name}
@@ -69,7 +69,7 @@ const Header = () => {
               }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="flex items-center gap-2 text-lg text-gray-300 hover:text-gray-200"
+              className="flex items-center gap-2 text-lg text-gray-300 hover:text-rose-500"
             >
               {item.icon}
               {item.name}

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { FaAngular, FaReact, FaCss3,FaJs } from "react-icons/fa"; // Ícones para Angular, React, CSS
-import { SiTypescript, SiTailwindcss, } from "react-icons/si"; // Ícones para TypeScript e TailwindCSS
+import { FaAngular, FaReact, FaCss3, FaJs } from "react-icons/fa"; // Ícones para Angular, React, CSS
+import { SiTypescript, SiTailwindcss } from "react-icons/si"; // Ícones para TypeScript e TailwindCSS
 
 interface Project {
   id: string;
   image: string;
   title: string;
   technologies: string[];
+  description: string;
+  link:string;
 }
 
 interface CarouselProps {
@@ -18,13 +20,13 @@ const technologyIcons: { [key: string]: JSX.Element } = {
   Angular: <FaAngular className="inline-block " />,
   React: <FaReact className="inline-block " />,
   TypeScript: <SiTypescript className="inline-block " />,
-  JavaScript:<FaJs className="inline-block"/>,
+  JavaScript: <FaJs className="inline-block" />,
   CSS: <FaCss3 className="inline-block " />,
   TailwindCSS: <SiTailwindcss className="inline-block " />,
 };
 
 const Carousel: React.FC<CarouselProps> = ({ projects }) => {
-  const [selected, setSelected] = useState(projects[0]?.id || "");
+  const [selected, setSelected] = useState(projects[0]?.id);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelected(event.target.id);
@@ -48,17 +50,17 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
       className="flex h-full w-full items-center justify-center pt-20 px-4 bg-transparent"
     >
       <div className="w-full max-w-6xl flex flex-col items-center">
-        <div className="container mx-auto text-center mb-8">
-          <h2 className="text-white text-5xl md:text-4xl lg:text-5xl font-light">
+        <div className="container mx-auto text-center mb-8 w-[85%] lg:w-[70%] ">
+          <h2 className="text-white text-5xl md:text-4xl lg:text-5xl font-light items-center">
             Projetos
           </h2>
           <br />
           <br />
-          <p className="text-white">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
-            numquam aliquam minus natus laborum, rerum unde ab excepturi, modi,
-            ratione ullam blanditiis sit! Fuga, laborum molestiae quis
-            asperiores tempore neque?
+          <p className="text-white text-justify">
+            Esses projetos foram desenvolvidos com o objetivo de aprimorar
+            minhas habilidades e aprender novas tecnologias. Cada um deles
+            representa um desafio que me ajudou a evoluir, explorando diferentes
+            conceitos e boas práticas.
           </p>
         </div>
 
@@ -92,7 +94,7 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full rounded-lg object-cover transform transition-transform duration-300 ${
+                      className={`w-full h-full rounded-lg object-cover transform transition-transform duration-300 hover:border-2 hover:border-rose-500  ${
                         selected === project.id
                           ? "scale-100"
                           : "scale-90 opacity-40 blur-xs"
@@ -102,7 +104,7 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
 
                   {/* container de detalhes  ....crescimento automático */}
                   <div
-                    className={`flex-grow bg-neutral-800/80 bg-opacity-75 text-white p-3 md:p-4 rounded-md transition-all duration-300 mt-4 ${
+                    className={`flex-grow bg-neutral-800/80 bg-opacity-75 text-white p-3 md:p-4 rounded-md transition-all duration-300 mt-4  ${
                       selected === project.id
                         ? "opacity-100 blur-none"
                         : "opacity-40 blur-xs"
@@ -112,21 +114,28 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
                       {project.title}
                     </h3>
                     <p className="text-xs md:text-sm mb-2">
-                      Tecnologias:
+                      Tecnologias:{" "}
                       {project.technologies.map((tech) => (
-                        <span key={tech} className="inline-flex items-center mr-2">
+                        <span
+                          key={tech}
+                          className="inline-flex items-center mr-4"
+                        >
                           {technologyIcons[tech]} {/* icone antes do texto */}
                           <span>{tech}</span> {/* texto da tech */}
                         </span>
                       ))}
                     </p>
+                    <h4 className="text-rose-400 text-sm mb-2 hover:underline hover:-scale-z-110">
+                      
+                      <a
+                        href={project.link}
+                        target="_blank"
+                      >
+                        {project.link}
+                      </a>
+                    </h4>
                     <div className="text-xs md:text-sm">
-                      <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Alias eveniet illum in laborum omnis assumenda
-                        dolorum ducimus hic vitae. Assumenda porro dolores ipsa
-                        placeat, dicta commodi voluptate ab adipisci quisquam?
-                      </p>
+                      <p>{project.description}</p>
                     </div>
                   </div>
                 </div>

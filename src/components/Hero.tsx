@@ -1,6 +1,6 @@
 // import profile from "../assets/profile.svg"
 import eu from "../assets/eu.jpeg";
-import { GithubLogo, LinkedinLogo } from "phosphor-react";
+import { GithubLogo, LinkedinLogo, InstagramLogo,EnvelopeSimple } from "phosphor-react";
 const Hero = () => {
   return (
     <>
@@ -25,12 +25,12 @@ const Hero = () => {
         </h2>
         <p className="sm:text-2xl px-4 text-center font-thin lg:text-3xl text-2xl">
           Graduando em{" "}
-          <span className="italic text-gray-300 font-medium">
+          <span className="italic text-slate-300 font-medium">
             Engenharia de Computação
           </span>{" "}
           na Universidade Federal do Vale do São Francisco
         </p>
-        <div className="flex gap-x-3">
+        <div className="flex gap-x-3 pr-4" >
           {/* adicionar mais icones aqui */}
           <a
             href="https://github.com/ssergiofeitosa"
@@ -48,6 +48,12 @@ const Hero = () => {
               className="hover:text-rose-500 transition duration-300"
               size={36}
             />
+          </a>
+          <a href="https://www.instagram.com/sergio_ffeitosa/" target="_blank">
+            <InstagramLogo className="hover:text-rose-500 transition duration-300" size={36}></InstagramLogo>
+          </a>
+          <a href="mailto:fsfsegundo@hotmail.com " target="_blank">
+            <EnvelopeSimple className="hover:text-rose-500 transition duration-300" size={36}></EnvelopeSimple>
           </a>
         </div>
       </section>

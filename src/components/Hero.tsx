@@ -1,5 +1,5 @@
 // import profile from "../assets/profile.svg"
-import eu from "../assets/eu.jpeg";
+import eu from "/eu.jpeg";
 import { GithubLogo, LinkedinLogo, InstagramLogo,EnvelopeSimple } from "phosphor-react";
 const Hero = () => {
   return (

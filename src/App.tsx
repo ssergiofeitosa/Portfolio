@@ -9,7 +9,7 @@ function App() {
   const projects = [
     {
       id: "item-1",
-      image: "/src/assets/burguermania.png",
+      image: "/burguermania.png",
       title: "Burguer Mania",
       technologies: ["Angular", "TypeScript", "CSS"],
       description: "Um aplicativo de delivery de hambúrgueres desenvolvido com Angular e TypeScript.",
@@ -17,7 +17,7 @@ function App() {
     },
     {
       id: "item-2",
-      image: "/src/assets/quiz.png",
+      image: "/quiz.png",
       title: "Quiz App de História",
       technologies: ["JavaScript", "TypeScript", "CSS"],
       description: "Um quiz interativo sobre história mundial, desenvolvido com JavaScript e TypeScript. O aplicativo inclui perguntas de múltipla escolha, um sistema de pontuação e feedback instantâneo.",
@@ -25,7 +25,7 @@ function App() {
     },
     {
       id: "item-3",
-      image: "/src/assets/googleformclone.png",
+      image: "/googleformclone.png",
       title: "Google Form Clone",
       technologies: ["React", "TypeScript", "TailwindCSS"],
       description: "Um clone do Google Forms desenvolvido com React e TailwindCSS. ",

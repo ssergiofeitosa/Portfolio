@@ -19,14 +19,14 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-gray-900/10 backdrop-blur-lg shadow-md z-50 p-4 h-14">
-      <div className="flex justify-between items-center w-full max-w-6xl mx-auto px-4">
+    <header className="fixed top-0 left-0 w-full bg-neutral-900/10 backdrop-blur-lg shadow-md z-50 p-4 h-14 border-b-1 border-b-rose-950/50">
+      <div className="flex justify-between items-center w-full max-w-6xl mx-auto px-4 ">
         {/* Botão do menu mobile (escondido em telas grandes) */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white "
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={28} /> : <List size={36} />}
+          {isOpen ? <X size={28} /> : <List size={32} />}
         </button>
 
         {/* Menu desktop (centralizado em telas grandes) */}
@@ -41,7 +41,7 @@ const Header = () => {
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.85 }}
-              className="relative flex gap-1 font-light mx-[10px] text-gray-100 hover:text-rose-500 transition-all after:content-[''] after:w-0 after:h-[2px] after:bg-rose-500 after:absolute after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
+              className="relative text-lg flex gap-1 font-light mx-[10px] lg:mx-[20px] text-gray-50 hover:text-rose-500 transition-all after:content-[''] after:w-0 after:h-[2px] after:bg-rose-500 after:absolute after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
             >
               {item.icon}
               {item.name}

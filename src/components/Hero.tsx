@@ -1,4 +1,6 @@
+
 // import profile from "../assets/profile.svg"
+import 'animate.css';
 import eu from "/eu.jpeg";
 import { GithubLogo, LinkedinLogo, InstagramLogo,EnvelopeSimple } from "phosphor-react";
 const Hero = () => {

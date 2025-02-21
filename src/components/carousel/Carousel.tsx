@@ -110,11 +110,11 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
                         : "opacity-40 blur-xs"
                     }`}
                   >
-                    <h3 className="text-base md:text-lg font-bold mb-2">
-                      {project.title}
+                    <h3 className="text-lg md:text-2xl  font-bold mb-2">
+                    {project.title}
                     </h3>
-                    <p className="text-xs md:text-sm mb-2">
-                      Tecnologias:{" "}
+                    <p className="text-sm md:text-md mb-2">
+                      <span className="text-md md:text-lg"> Tecnologias:{" "}</span>
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
@@ -134,7 +134,7 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
                         {project.link}
                       </a>
                     </h4>
-                    <div className="text-xs md:text-sm">
+                    <div className="text-sm md:text-lg">
                       <p>{project.description}</p>
                     </div>
                   </div>

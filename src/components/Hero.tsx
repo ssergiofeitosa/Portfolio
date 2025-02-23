@@ -8,7 +8,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className=" w-full h-screen text-white flex flex-col justify-center snap-start items-center gap-6  "
+        className=" w-full min-h-screen text-white flex flex-col justify-center snap-start items-center gap-6  pt-14"
       >
         <img
           className="text-white rounded-full"

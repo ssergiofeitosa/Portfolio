@@ -23,14 +23,14 @@ const Header = () => {
       <div className="flex justify-between items-center w-full max-w-6xl mx-auto px-4 ">
         {/* Botão do menu mobile (escondido em telas grandes) */}
         <button
-          className="md:hidden text-white "
+          className="sm:hidden text-white "
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <List size={32} />}
         </button>
 
         {/* Menu desktop (centralizado em telas grandes) */}
-        <nav className="hidden md:flex justify-center w-full text-white gap-6">
+        <nav className="hidden sm:flex justify-center w-full text-white gap-6">
           {menuItems.map((item, index) => (
             <motion.a
               key={index}

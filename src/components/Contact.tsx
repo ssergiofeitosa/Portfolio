@@ -7,7 +7,7 @@ const Contact = () => {
       className=" min-h-[97%]  py-16 md:pt-16 w-full flex items-center justify-center mt-[60px] "
     >
       <div className="w-full max-w-screen-md px-4 py-8   drop-shadow-lg">
-        <h1 className="mb-4 text-5xl tracking-tight font-light  text-center text-white">
+        <h1 className="mb-4 text-5xl tracking-tight font-medium  text-center text-white">
           Contato
         </h1>
         <p className=" mb-8 lg:mb-16 font-extralight text-center text-white sm:text-xl">

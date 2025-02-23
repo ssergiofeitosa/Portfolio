@@ -9,6 +9,7 @@ interface Project {
   technologies: string[];
   description: string;
   link:string;
+  site:string;
 }
 
 interface CarouselProps {
@@ -51,12 +52,12 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
     >
       <div className="w-full max-w-6xl flex flex-col items-center">
         <div className="container mx-auto text-center mb-8 w-[85%] lg:w-[70%] ">
-          <h2 className="text-white text-5xl md:text-4xl lg:text-5xl font-light items-center">
+          <h2 className="text-white text-5xl  md:text-4xl lg:text-5xl font-medium items-center">
             Projetos
           </h2>
           <br />
           <br />
-          <p className="text-white text-justify">
+          <p className="text-white font-extralight sm:text-xl text-justify">
             Esses projetos foram desenvolvidos com o objetivo de aprimorar
             minhas habilidades e aprender novas tecnologias. Cada um deles
             representa um desafio que me ajudou a evoluir, explorando diferentes
@@ -110,11 +111,17 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
                         : "opacity-40 blur-xs"
                     }`}
                   >
-                    <h3 className="text-lg md:text-2xl  font-bold mb-2">
-                    {project.title}
+                    <h3 className="text-lg md:text-2xl font-bold mb-2">
+                      <a
+                        href={project.site} // Link do deploy
+                        target="_blank" // Abre o link em nova aba
+                        className="text-rose-400 hover:underline"
+                      >
+                        {project.title}
+                      </a>
                     </h3>
                     <p className="text-sm md:text-md mb-2">
-                      <span className="text-md md:text-lg"> Tecnologias:{" "}</span>
+                      <span className="text-md md:text-lg"> Tecnologias: </span>
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
@@ -126,11 +133,7 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
                       ))}
                     </p>
                     <h4 className="text-rose-400 text-sm mb-2 hover:underline hover:-scale-z-110">
-                      
-                      <a
-                        href={project.link}
-                        target="_blank"
-                      >
+                      <a href={project.link} target="_blank">
                         {project.link}
                       </a>
                     </h4>

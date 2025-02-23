@@ -1,8 +1,12 @@
-
 // import profile from "../assets/profile.svg"
-import 'animate.css';
+import "animate.css";
 import eu from "/eu.jpeg";
-import { GithubLogo, LinkedinLogo, InstagramLogo,EnvelopeSimple } from "phosphor-react";
+import {
+  GithubLogo,
+  LinkedinLogo,
+  InstagramLogo,
+  EnvelopeSimple,
+} from "phosphor-react";
 const Hero = () => {
   return (
     <>
@@ -17,7 +21,7 @@ const Hero = () => {
           width={120}
           height={160}
         />
-        <h1 className="sm:text-5xl  font-light text-4xl  ">
+        <h1 className="sm:text-5xl  font-medium text-4xl text-pink-100 pb-1">
           <span className="text-rose-500">{"<"}</span> Sérgio Feitosa
           <span className="text-rose-500"> {"/>"}</span>
         </h1>
@@ -32,7 +36,7 @@ const Hero = () => {
           </span>{" "}
           na Universidade Federal do Vale do São Francisco
         </p>
-        <div className="flex gap-x-3 pr-4" >
+        <div className="flex gap-x-3 pr-4">
           {/* adicionar mais icones aqui */}
           <a
             href="https://github.com/ssergiofeitosa"
@@ -52,10 +56,16 @@ const Hero = () => {
             />
           </a>
           <a href="https://www.instagram.com/sergio_ffeitosa/" target="_blank">
-            <InstagramLogo className="hover:text-rose-500 transition duration-300" size={36}></InstagramLogo>
+            <InstagramLogo
+              className="hover:text-rose-500 transition duration-300"
+              size={36}
+            ></InstagramLogo>
           </a>
           <a href="mailto:fsfsegundo@hotmail.com " target="_blank">
-            <EnvelopeSimple className="hover:text-rose-500 transition duration-300" size={36}></EnvelopeSimple>
+            <EnvelopeSimple
+              className="hover:text-rose-500 transition duration-300"
+              size={36}
+            ></EnvelopeSimple>
           </a>
         </div>
       </section>

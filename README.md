@@ -1,6 +1,6 @@
 # Landing Page (Em Construção)
 
-Esta é uma landing page ainda em desenvolvimento, criada com as seguintes tecnologias:
+Esta é uma landing page de portfólio ainda em desenvolvimento, criada com as seguintes tecnologias:
 
 - **React** - Biblioteca JavaScript para construir interfaces de usuário.
 - **TypeScript** - Superset do JavaScript que adiciona tipagem estática.

@@ -15,13 +15,13 @@ const Hero = () => {
         className=" w-full min-h-screen text-white flex flex-col justify-center snap-start items-center gap-6  pt-14"
       >
         <img
-          className="text-white rounded-full"
+          className="text-white rounded-full outline-3 outline-rose-900"
           src={eu}
           alt=""
           width={120}
           height={160}
         />
-        <h1 className="sm:text-5xl  font-medium text-4xl text-pink-100 pb-1">
+        <h1 className="sm:text-5xl  font-medium text-4xl text-white pb-1">
           <span className="text-rose-500">{"<"}</span> Sérgio Feitosa
           <span className="text-rose-500"> {"/>"}</span>
         </h1>

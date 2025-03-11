@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-neutral-900/10 backdrop-blur-lg shadow-md z-50 p-4 h-14 border-b-1 border-b-rose-950/50">
+    <header className="fixed top-0 left-0 w-full bg-neutral-900/10 backdrop-blur-lg shadow-md z-50 p-4 h-14  ">
       <div className="flex justify-between items-center w-full max-w-6xl mx-auto px-4 ">
         {/* Botão do menu mobile (escondido em telas grandes) */}
         <button

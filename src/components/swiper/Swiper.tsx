@@ -13,15 +13,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/effect-coverflow";
 import Card from "../Card";
 
-interface Project {
-  id: string;
-  image: string;
-  title: string;
-  technologies: string[];
-  description: string;
-  link: string;
-  site: string;
-}
+
 
 export default () => {
   const projects = [

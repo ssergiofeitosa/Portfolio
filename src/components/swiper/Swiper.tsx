@@ -6,16 +6,11 @@ import {
   EffectCoverflow,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-// @ts-ignore
-import 'swiper/css';
-// @ts-ignore
-import 'swiper/css/navigation';
-// @ts-ignore
-import 'swiper/css/pagination';
-// @ts-ignore
-import 'swiper/css/scrollbar';
-// @ts-ignore
-import 'swiper/css/effect-coverflow';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/effect-coverflow";
 import Card from "../Card";
 
 

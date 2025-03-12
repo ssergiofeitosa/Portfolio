@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import Carousel from './components/carousel/Carousel';
 import Footer from "./components/Footer";
-
+import Swiper from "./components/swiper/Swiper";
 function App() {
   const projects = [
     {
@@ -38,10 +38,10 @@ function App() {
 
   return (
     <>
-      <div className="pattern bg-gray-950 flex flex-col items-center scroll-smooth font-primary overflow-x-hidden">
+      <div className="pattern bg-gray-950 flex flex-col items-center scroll-smooth font-primary overflow-x-hidden w-screen">
         <Header />
         <Hero></Hero>
-        <Carousel projects={projects}></Carousel>
+        <Swiper></Swiper>
         <div className="h-[200px] w-full"></div> {/* gambiarra */}
         <Contact></Contact>
         <Footer></Footer>

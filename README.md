@@ -61,4 +61,4 @@ Contribuições são bem-vindas! Se você tiver alguma sugestão de melhorias ou
 
 ---
 
-**Observação**: Este projeto ainda está em desenvolvimento, então aguarde novidades em breve!
+**Observação**: Este projeto ainda está em desenvolvimento.

@@ -27,7 +27,7 @@ const Hero = () => {
         </h1>
         <h2 className="sm:text-3xl font-normal text-2xl">
           {" "}
-          Desenvolvedor Front-End{" "}
+          Desenvolvedor Web{" "}
         </h2>
         <p className="sm:text-2xl px-4 text-center font-thin lg:text-3xl text-2xl">
           Graduando em{" "}

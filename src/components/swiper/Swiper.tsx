@@ -85,7 +85,7 @@ const Swiperr = () => {
     >
       <div className="w-full max-w-6xl flex flex-col items-center ">
         <div className="container mx-auto text-center mb-8 w-[85%] lg:w-[70%] ">
-          <h2 className="text-white text-5xl md:text-4xl lg:text-5xl font-medium items-center mb-2">
+          <h2 className="text-white text-5xl md:text-4xl lg:text-5xl font-bold items-center mb-2">
             Projetos
           </h2>
           <div className="h-1 bg-gradient-to-r from-transparent via-rose-500 to-transparent w-48 mx-auto mb-8"></div>

@@ -14,9 +14,7 @@ import "/node_modules/swiper/modules/scrollbar.css";
 import "/node_modules/swiper/modules/effect-coverflow.css";
 import Card from "../Card";
 
-
-
-export default () => {
+const Swiperr = () => {
   const projects = [
     {
       id: "item-1",
@@ -49,7 +47,7 @@ export default () => {
       site: "",
     },
     {
-      id: "item-1",
+      id: "item-4",
       image: "/burguermania.png",
       title: "Burguer Mania",
       technologies: ["Angular", "TypeScript", "CSS"],
@@ -59,7 +57,7 @@ export default () => {
       site: "",
     },
     {
-      id: "item-2",
+      id: "item-5",
       image: "/quiz.png",
       title: "Quiz App de História",
       technologies: ["JavaScript", "TypeScript", "CSS"],
@@ -69,7 +67,7 @@ export default () => {
       site: "https://projeto-restic-quiz-historia.vercel.app",
     },
     {
-      id: "item-3",
+      id: "item-6",
       image: "/googleformclone.png",
       title: "Google Form Clone",
       technologies: ["React", "TypeScript", "TailwindCSS"],
@@ -87,11 +85,11 @@ export default () => {
     >
       <div className="w-full max-w-6xl flex flex-col items-center ">
         <div className="container mx-auto text-center mb-8 w-[85%] lg:w-[70%] ">
-          <h2 className="text-white text-5xl  md:text-4xl lg:text-5xl font-medium items-center">
+          <h2 className="text-white text-5xl md:text-4xl lg:text-5xl font-medium items-center mb-2">
             Projetos
           </h2>
-          <br />
-          <br />
+          <div className="h-1 bg-gradient-to-r from-transparent via-rose-500 to-transparent w-48 mx-auto mb-8"></div>
+
           <p className="text-white font-extralight sm:text-xl text-justify">
             Esses projetos foram desenvolvidos com o objetivo de aprimorar
             minhas habilidades e aprender novas tecnologias. Cada um deles
@@ -135,3 +133,4 @@ export default () => {
     </div>
   );
 };
+export default Swiperr;

@@ -9,11 +9,19 @@ import {
 } from "phosphor-react";
 
 const Hero = () => {
+  const scrollToSection = () => {
+    const section = document.querySelector("#projects");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section
       id="home"
       className="w-full min-h-screen flex flex-col justify-center items-center relative overflow-hidden snap-start"
     >
+      <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-neutral-900 to-transparent z-0"></div>
+
       {/* gradiente de fundo */}
       <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 z-[-1]"></div>
 
@@ -163,7 +171,7 @@ const Hero = () => {
             transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
             className="text-rose-500"
           >
-            <ArrowDown size={32} weight="bold" />
+            <ArrowDown size={32} weight="bold" onClick={scrollToSection} />
           </motion.div>
         </motion.div>
       </div>

@@ -5,7 +5,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Swiper from "./components/swiper/Swiper";
 function App() {
-
   return (
     <>
       <div className="pattern bg-gray-950 flex flex-col items-center scroll-smooth font-primary overflow-x-hidden w-screen">

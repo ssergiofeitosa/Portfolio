@@ -40,11 +40,11 @@ const Hero = () => {
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-rose-500 to-rose-700 blur-md opacity-70 animate-pulse"></div>
           <img
-            className="relative w-32 h-32 object-cover rounded-full border-2 border-rose-500 p-1 bg-neutral-900"
+            className="relative w-37 h-37 sm:w-43 sm:h-43 object-cover rounded-full border-2 border-rose-500 p-1 bg-neutral-900"
             src="/eu.jpeg"
             alt="Sérgio Feitosa"
-            width={120}
-            height={120}
+            // width={120}
+            // height={120}
           />
         </motion.div>
 
@@ -95,7 +95,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="sm:text-3xl max-w-4xl text-center font-light text-gray-300"
+          className="sm:text-3xl max-w-4xl text-center   font-light text-gray-300"
         >
           Graduando em{" "}
           <span className="italic text-white font-medium relative inline-block">
@@ -114,49 +114,55 @@ const Hero = () => {
         >
           {[
             {
-              icon: <GithubLogo size={32} weight="fill" />,
+              icon: <GithubLogo size={32} weight="light" />,
               href: "https://github.com/ssergiofeitosa",
               label: "GitHub",
             },
             {
-              icon: <LinkedinLogo size={32} weight="fill" />,
+              icon: <LinkedinLogo size={32} weight="light" />,
               href: "https://www.linkedin.com/in/francisco-sérgio-feitosa-lima-segundo-874118210/",
               label: "LinkedIn",
             },
             {
-              icon: <InstagramLogo size={32} weight="fill" />,
+              icon: <InstagramLogo size={32} weight="light" />,
               href: "https://www.instagram.com/sergio_ffeitosa/",
               label: "Instagram",
             },
             {
-              icon: <EnvelopeSimple size={32} weight="fill" />,
+              icon: <EnvelopeSimple size={32} weight="light" />,
               href: "mailto:fsfsegundo@hotmail.com",
               label: "Email",
             },
           ].map((social, index) => (
-            <motion.a
+            <motion.div
               key={index}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.label}
-              whileHover={{
-                scale: 1.2,
-                color: "#f43f5e",
-                transition: { duration: 0.2 },
-              }}
-              whileTap={{ scale: 0.9 }}
+              className="relative group"
               initial={{ opacity: 0, y: 20 }}
               animate={{
                 opacity: 1,
                 y: 0,
                 transition: { delay: 1 + index * 0.1 },
               }}
-              className="text-gray-300 hover:text-rose-500 transition-colors duration-300"
             >
-              {social.icon}
-            </motion.a>
-          ))}
+              <div className="absolute inset-0 bg-rose-500/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative backdrop-blur-md bg-white/5 border border-white/50 rounded-xl p-1 shadow-lg transition-all duration-300 group-hover:bg-white/20 group-hover:border-rose-500/50">
+                <motion.a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  whileHover={{
+                    scale: 1.1,
+                    color: "#f43f5e",
+                    transition: { duration: 0.2 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="text-gray-200 hover:text-rose-500 transition-colors duration-300 flex items-center justify-center"
+                >
+                  {social.icon}
+                </motion.a>
+              </div>
+            </motion.div>))}
         </motion.div>
 
         {/* seta */}

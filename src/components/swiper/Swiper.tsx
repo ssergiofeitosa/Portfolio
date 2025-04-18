@@ -90,11 +90,11 @@ const Swiperr = () => {
           </h2>
           <div className="h-1 bg-gradient-to-r from-transparent via-rose-500 to-transparent w-48 mx-auto mb-8"></div>
 
-          <p className="text-white font-extralight sm:text-xl text-justify">
-            Esses projetos foram desenvolvidos com o objetivo de aprimorar
-            minhas habilidades e aprender novas tecnologias. Cada um deles
-            representa um desafio que me ajudou a evoluir, explorando diferentes
-            conceitos e boas práticas.
+          <p className="text-white text-lg max-w-2xl mx-auto leading-relaxed">
+            Esses projetos foram criados como parte do meu processo de
+            aprendizado e evolução na área. Cada um teve seu papel em me ajudar
+            a entender melhor as ferramentas, boas práticas e resolver problemas
+            de forma mais eficiente.
           </p>
         </div>
         <Swiper

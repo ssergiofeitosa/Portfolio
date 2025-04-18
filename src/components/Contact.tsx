@@ -55,7 +55,7 @@ const Contact = () => {
             Contato
             <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-rose-500 to-transparent"></span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white text-lg max-w-2xl mx-auto leading-relaxed">
             Precisa de um site ou quer tirar uma ideia do papel? Me chama! Vamos
             conversar e ver como posso te ajudar no seu projeto.
           </p>

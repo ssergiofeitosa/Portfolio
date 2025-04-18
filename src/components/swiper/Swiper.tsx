@@ -104,14 +104,14 @@ const Swiperr = () => {
           centeredSlides={true}
           loop={true}
           coverflowEffect={{
-            rotate: 0,
+            rotate: 1,
             stretch: 0,
             depth: 150,
             modifier: 3.5,
             slideShadows: true,
           }}
-          spaceBetween={30}
-          slidesPerView={1}
+          spaceBetween={10}
+          slidesPerView={3}
           navigation
           pagination={{ clickable: true }}
           breakpoints={{
@@ -123,7 +123,7 @@ const Swiperr = () => {
         >
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
-              <div className="p-4 h-full bg-neutral-800 rounded-lg shadow-lg">
+              <div className="p-4 h-full bg-neutral-900/80 rounded-lg shadow-xs  ">
                 <Card project={project} />
               </div>
             </SwiperSlide>

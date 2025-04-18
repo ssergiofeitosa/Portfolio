@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { PaperPlaneTilt, Envelope, ChatText, Article } from "phosphor-react";
 
 const Contact = () => {
+  // estado para armazenar os dados do formulário
+  // e o estado de foco dos campos
   const [formState, setFormState] = useState({
     email: "",
     subject: "",
@@ -14,7 +16,8 @@ const Contact = () => {
     subject: false,
     message: false,
   });
-
+//handlers para lidar com o foco e blur dos campos
+  // e para lidar com a mudança de valor dos campos
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -65,10 +68,7 @@ const Contact = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="bg-neutral-800/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl border border-neutral-700/50 relative"
         >
-          {/*deco */}
-          <div className="absolute top-0 left-0 w-20 h-20 overflow-hidden">
-            <div className="absolute top-0 left-0 w-24 h-24 bg-rose-500/20 -rotate-45 transform origin-top-left"></div>
-          </div>
+          
 
           <form className="p-8 space-y-6 relative z-10">
             <div className="space-y-1">

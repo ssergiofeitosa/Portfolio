@@ -104,13 +104,13 @@ const Swiperr = () => {
           centeredSlides={true}
           loop={true}
           coverflowEffect={{
-            rotate: 1,
+            rotate: 3,
             stretch: 0,
-            depth: 150,
-            modifier: 3.5,
+            depth: 120,
+            modifier: 3.2,
             slideShadows: true,
           }}
-          spaceBetween={10}
+          spaceBetween={30}
           slidesPerView={3}
           navigation
           pagination={{ clickable: true }}

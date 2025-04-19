@@ -11,12 +11,12 @@ html {
 
 
 /* From Uiverse.io by adamgiebl */ 
-.pattern {
-  width: 100%;
+.pattern { width: 100%;
   height: 100%;
-  --color: rgba(207, 207, 207, 0.158);
-  background-color: #02040a;
-  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-  background-size: 55px 55px;
+  --color: rgba(207, 207, 207, 0.05);
+  background-color: #080808;
+  background-image: 
+    repeating-linear-gradient(45deg, var(--color), var(--color) 1px, transparent 2px, transparent 30px),
+    /* repeating-linear-gradient(120deg, var(--color), var(--color) 1px, transparent 1px, transparent 30px), */
+    repeating-linear-gradient(0deg, var(--color), var(--color) 1px, transparent 5px, transparent 30px);
 }

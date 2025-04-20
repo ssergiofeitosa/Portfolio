@@ -66,7 +66,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="bg-neutral-800/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl border border-neutral-700/50 relative"
+          className="bg-neutral-800/30 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl border border-neutral-700/50 relative"
         >
           
 
@@ -168,7 +168,7 @@ const Contact = () => {
             >
               <button
                 type="submit"
-                className="flex items-center gap-2 bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-rose-500/20"
+                className="flex items-center gap-2 bg-gradient-to-r from-rose-900 to-rose-800 hover:from-rose-600 hover:to-rose-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-rose-500/20"
               >
                 <span>Enviar</span>
                 <PaperPlaneTilt weight="bold" className="text-white" />

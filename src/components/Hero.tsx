@@ -162,9 +162,18 @@ const Hero = () => {
                   {social.icon}
                 </motion.a>
               </div>
-            </motion.div>))}
+            </motion.div>
+          ))}
         </motion.div>
-
+        <a
+          href="https://drive.google.com/file/d/1lm1Z0fblj4HtSPh_FdPa9dSJcLc7pHqT/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="text-white bg-gradient-to-bl b from-rose-700/40 to-rose-800/70 p-3  font-bold hover:scale-x-102 hover:-translate-y-1 transition-all rounded-2xl">
+            Meu Curículo
+          </button>
+        </a>
         {/* seta */}
         <motion.div
           initial={{ opacity: 0 }}

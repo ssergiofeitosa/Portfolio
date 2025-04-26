@@ -166,7 +166,7 @@ const Hero = () => {
           ))}
         </motion.div>
         <a
-          href="https://drive.google.com/file/d/1-VQTFod1uzlGyDBVcwlqtzmSZSHZ2KQ9/view?usp=sharing"
+          href="https://drive.google.com/file/d/1lJkk1EkjooN6Ll1Yc9bRMDy7O_G8ZELN/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >

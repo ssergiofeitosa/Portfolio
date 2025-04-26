@@ -171,7 +171,7 @@ const Hero = () => {
           rel="noopener noreferrer"
         >
           <button className="text-white bg-gradient-to-bl b from-rose-700/40 to-rose-800/70 p-3  font-bold hover:scale-x-102 hover:-translate-y-1 transition-all rounded-2xl">
-            Meu Curículo
+            Meu Currículo
           </button>
         </a>
         {/* seta */}

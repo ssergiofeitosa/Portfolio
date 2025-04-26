@@ -42,10 +42,8 @@ const Card = ({ project }: CardProps) => {
   }
 
   return (
-    <div className="relative w-full max-w-[320px] sm:max-w-[400px] h-full flex flex-col rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl mx-auto">
-      {/* efeito borda hover */}
-      <div className="absolute inset-0 rounded-2xl p-[1.5px] bg-gradient-to-b from-rose-500 to-rose-500 opacity-0 group-hover:opacity-90 transition-opacity duration-200 z-0 blur-[0.5px]" />
-
+    <div className="relative w-full max-w-[320px] sm:max-w-[400px] h-full flex flex-col rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-[1.00] hover:shadow-2xl mx-auto">
+    
       {/* container do card */}
       <div className="relative z-10 flex flex-col h-full bg-neutral-900/95 rounded-2xl overflow-hidden border border-neutral-800">
         {/* Image */}
@@ -86,7 +84,7 @@ const Card = ({ project }: CardProps) => {
           <div className="mb-3">
             <h3 className="text-xl md:text-2xl font-bold text-white inline-block">
               {project.title}
-              <div className="h-[2px] bg-gradient-to-r from-rose-500 to-fuchsia-500 mt-1 w-0 group-hover:w-full transition-all duration-300" />
+              <div className="h-[2px] bg-gradient-to-r from-rose-600 to-red-900 mt-1 w-0 group-hover:w-full transition-all duration-300" />
             </h3>
           </div>
 

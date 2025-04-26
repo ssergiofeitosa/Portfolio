@@ -169,8 +169,9 @@ const Hero = () => {
           href="https://drive.google.com/file/d/1lJkk1EkjooN6Ll1Yc9bRMDy7O_G8ZELN/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
+          className="mb-20"
         >
-          <button className="text-white bg-gradient-to-bl b from-rose-700/40 to-rose-800/70 p-3  font-bold hover:scale-x-102 hover:-translate-y-1 transition-all rounded-2xl">
+          <button className="text-white bg-gradient-to-bl b from-rose-700/40 to-rose-800/70 p-3  font-bold hover:scale-x-102 hover:-translate-y-1 transition-all rounded-2xl ">
             Meu Currículo
           </button>
         </a>
@@ -182,8 +183,8 @@ const Hero = () => {
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
+            animate={{ y: [0, 15, 0] }}
+            transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2.0 }}
             className="text-rose-500"
           >
             <ArrowDown size={32} weight="bold" onClick={scrollToSection} />

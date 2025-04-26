@@ -1,26 +1,27 @@
-import { motion } from "framer-motion"
-import "animate.css"
-import { GithubLogo, LinkedinLogo, InstagramLogo, EnvelopeSimple, ArrowDown, Download } from "phosphor-react"
+import { motion } from "framer-motion";
+import "animate.css";
+import {
+  GithubLogo,
+  LinkedinLogo,
+  InstagramLogo,
+  EnvelopeSimple,
+  ArrowDown,
+  Download,
+} from "phosphor-react";
 
 const Hero = () => {
-  
-
- 
-
   const scrollToSection = () => {
-    const section = document.querySelector("#projects")
+    const section = document.querySelector("#projects");
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
+      section.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <section
       id="home"
       className="w-full min-h-screen flex flex-col justify-center items-center relative overflow-hidden snap-start"
     >
-
-
       <div className="container mx-auto px-4 flex flex-col items-center text-center md:text-left gap-6 mt-16">
         {/* container pai*/}
         <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12">
@@ -30,15 +31,14 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="relative md:w-1/3 flex justify-center"
           >
-            <div className="absolute top-1/2 left-1/2 w-44 h-44 md:w-64 md:h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-rose-700 to-red-700 blur-sm  animate-pulse "></div>
+            <div className="absolute top-1/2 left-1/2 w-44 h-44 md:w-64 md:h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-rose-700 to-red-700 blur-sm animate-pulse"></div>
             <img
-              className="relative w-40 h-40 md:w-64 md:h-64 object-cover rounded-full  border-2 border-rose-600 p-1 bg-neutral-900"
+              className="relative w-40 h-40 md:w-64 md:h-64 object-cover rounded-full border-2 border-rose-600 p-1 bg-neutral-900 filter brightness-75"
               src="/eu.jpeg"
               alt="Sérgio Feitosa"
             />
           </motion.div>
 
-          
           <div className="md:w-2/3 flex flex-col items-center md:items-start gap-6">
             {/* nome */}
             <motion.h1
@@ -76,8 +76,9 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.5 }}
               className="relative self-center md:self-start"
             >
-              <h2 className="sm:text-3xl text-2xl font-medium text-white">Desenvolvedor Web</h2>
-              
+              <h2 className="sm:text-3xl text-2xl font-medium text-white">
+                Desenvolvedor Web
+              </h2>
             </motion.div>
 
             {/* aniamçao da descricao */}
@@ -201,7 +202,7 @@ const Hero = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

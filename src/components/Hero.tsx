@@ -5,7 +5,7 @@ import {
   LinkedinLogo,
   InstagramLogo,
   EnvelopeSimple,
-  ArrowDown,
+  ArrowDown, Download
 } from "phosphor-react";
 
 const Hero = () => {
@@ -171,9 +171,10 @@ const Hero = () => {
           rel="noopener noreferrer"
           className="mb-20"
         >
-          <button className="text-white bg-gradient-to-bl b from-rose-700/40 to-rose-800/70 p-3  font-bold hover:scale-x-102 hover:-translate-y-1 transition-all rounded-2xl ">
-            Meu Currículo
+          <button className="flex  text-white bg-gradient-to-bl from-rose-700/20 to-rose-800/60 p-3  font-bold hover:scale-x-102 hover:-translate-y-1 transition-all rounded-2xl ">
+            Meu Currículo <Download className="ml-2" size={24}></Download> 
           </button>
+          
         </a>
         {/* seta */}
         <motion.div

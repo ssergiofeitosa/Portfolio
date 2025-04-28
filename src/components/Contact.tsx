@@ -168,7 +168,7 @@ const Contact = () => {
             >
               <button
                 type="submit"
-                className="flex items-center gap-2 bg-gradient-to-r from-rose-900 to-rose-800 hover:from-rose-600 hover:to-rose-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-rose-500/20"
+                className="flex items-center gap-2 text-white border border-rose-500/30 bg-neutral-800/60 hover:bg-neutral-700/60 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
               >
                 <span>Enviar</span>
                 <PaperPlaneTilt weight="bold" className="text-white" />

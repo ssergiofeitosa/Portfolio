@@ -31,7 +31,6 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="relative md:w-1/3 flex justify-center"
           >
-            <div className="absolute top-1/2 left-1/2 w-44 h-44 md:w-64 md:h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-rose-700 to-red-700 blur-sm animate-pulse"></div>
             <img
               className="relative w-40 h-40 md:w-64 md:h-64 object-cover rounded-full border-2 border-rose-600 p-1 bg-neutral-900 filter brightness-75"
               src="/eu.jpeg"

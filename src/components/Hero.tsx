@@ -110,7 +110,7 @@ const Hero = () => {
                 },
                 {
                   icon: <LinkedinLogo size={32} weight="light" />,
-                  href: "https://www.linkedin.com/in/francisco-sérgio-feitosa-lima-segundo-874118210/",
+                  href: "www.linkedin.com/in/sérgio-feitosa-874118210",
                   label: "LinkedIn",
                 },
                 {

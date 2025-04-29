@@ -164,7 +164,7 @@ const Hero = () => {
               className="self-center md:self-start"
             >
               <a
-                href="https://drive.google.com/file/d/1lJkk1EkjooN6Ll1Yc9bRMDy7O_G8ZELN/view?usp=sharing"
+                href="https://drive.google.com/file/d/1lm1Z0fblj4HtSPh_FdPa9dSJcLc7pHqT/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

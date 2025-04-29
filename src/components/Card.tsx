@@ -42,12 +42,11 @@ const Card = ({ project }: CardProps) => {
   }
 
   return (
-    <div className="relative w-full max-w-[320px] sm:max-w-[400px] h-full flex flex-col rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-[1.00] hover:shadow-2xl mx-auto">
-    
+    <div className="relative w-full max-w-[700px] sm:max-w-[800px] h-auto flex flex-col rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-[1.00] hover:shadow-2xl mx-auto">
       {/* container do card */}
-      <div className="relative z-10 flex flex-col h-full bg-neutral-900/95 rounded-2xl overflow-hidden border border-neutral-800">
+      <div className="relative z-10 flex flex-col h-full w-full bg-neutral-900/95 rounded-2xl overflow-hidden border border-neutral-800">
         {/* Image */}
-        <div className="relative h-[200px] md:h-[220px] overflow-hidden">
+        <div className="relative h-[180px] md:h-[420px] overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent opacity-40 z-10 group-hover:opacity-60 transition-all" />
 
           <img
@@ -65,7 +64,7 @@ const Card = ({ project }: CardProps) => {
               className="bg-neutral-900/70 text-rose-400 p-3.5 rounded-full hover:bg-rose-500 hover:text-white transition-all duration-300 shadow-lg"
               aria-label="View GitHub repository"
             >
-              <FaGithub size={20} />
+              <FaGithub size={22} />
             </a>
             <a
               href={project.site}
@@ -74,7 +73,7 @@ const Card = ({ project }: CardProps) => {
               className="bg-neutral-900/70 backdrop-blur-md text-rose-400 p-3.5 rounded-full hover:bg-rose-500 hover:text-white transition-all duration-300 shadow-lg"
               aria-label="Visit live site"
             >
-              <FaExternalLinkAlt size={18} />
+              <FaExternalLinkAlt size={20} />
             </a>
           </div>
         </div>
@@ -82,13 +81,13 @@ const Card = ({ project }: CardProps) => {
         {/* conteúdo de texto */}
         <div className="flex-grow flex flex-col p-6 bg-neutral-900 border-t border-neutral-800/50">
           <div className="mb-3">
-            <h3 className="text-xl md:text-2xl font-bold text-white inline-block">
+            <h3 className="text-2xl md:text-3xl font-bold text-white inline-block">
               {project.title}
               <div className="h-[2px] bg-gradient-to-r from-rose-600 to-red-900 mt-1 w-0 group-hover:w-full transition-all duration-300" />
             </h3>
           </div>
 
-          <p className="text-sm text-gray-300 mb-5 line-clamp-2">
+          <p className="text-base text-gray-300 mb-5 line-clamp-3">
             {project.description}
           </p>
 
@@ -100,9 +99,9 @@ const Card = ({ project }: CardProps) => {
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="inline-flex items-center gap-1.5 bg-neutral-800/80 backdrop-blur-sm px-2.5 py-1.5 rounded-lg text-xs border border-neutral-700/50 transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:bg-white/5"
+                  className="inline-flex items-center gap-1.5 bg-neutral-800/80 backdrop-blur-sm px-3 py-1.5 rounded-lg text-sm border border-neutral-700/50 transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:bg-white/5"
                 >
-                  <span className="text-lg">{technologyIcons[tech]}</span>
+                  <span className="text-xl">{technologyIcons[tech]}</span>
                   <span className="text-gray-200 font-medium">{tech}</span>
                 </span>
               ))}

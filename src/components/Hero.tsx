@@ -76,7 +76,7 @@ const Hero = () => {
               className="relative self-center md:self-start"
             >
               <h2 className="sm:text-3xl text-2xl font-medium text-white">
-                Desenvolvedor Web
+                Desenvolvedor de Software
               </h2>
             </motion.div>
 

@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 import {
   Navigation,
@@ -58,7 +58,8 @@ const Swiperr = () => {
         "Um clone do Google Forms desenvolvido com React e TailwindCSS.",
       link: "https://github.com/ssergiofeitosa/Google-Form-Clone-React.git",
       site: "",
-    },{
+    },
+    {
       id: "item-2",
       image: "/quiz.png",
       title: "Quiz App de História",
@@ -78,10 +79,12 @@ const Swiperr = () => {
       link: "https://github.com/ssergiofeitosa/Google-Form-Clone-React.git",
       site: "",
     },
-    
   ];
   return (
-    <div id="projects" className="flex h-full w-full items-center justify-center pt-20 px-4 bg-transparent">
+    <div
+      id="projects"
+      className="flex h-full w-full items-center justify-center pt-20 px-4 bg-transparent"
+    >
       <div className="w-full max-w-[85%] flex flex-col items-center">
         <div className="container mx-auto text-center mb-8 w-[85%] lg:w-[70%]">
           <h2 className="text-white text-5xl md:text-4xl lg:text-5xl font-bold items-center mb-2">
@@ -89,7 +92,9 @@ const Swiperr = () => {
           </h2>
           <div className="h-1 bg-gradient-to-r from-transparent via-rose-500 to-transparent w-48 mx-auto mb-8"></div>
           <p className="text-white text-lg max-w-2xl mx-auto leading-relaxed">
-            Esses projetos foram criados como parte do meu processo de aprendizado.
+            Esses projetos foram desenvolvidos como parte do meu processo de
+            aprendizado, e cada um deles representou uma oportunidade prática de
+            explorar novas tecnologias e ferramentas.{" "}
           </p>
         </div>
 

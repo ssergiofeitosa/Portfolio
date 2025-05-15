@@ -56,7 +56,6 @@ const Hero = () => {
             className="lg:w-1/3"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-orange-500 rounded-full blur-2xl opacity-20 animate-pulse" />
               <img
                 src="/eu.jpeg"
                 alt="Sérgio Feitosa"

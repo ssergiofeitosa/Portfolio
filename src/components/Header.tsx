@@ -1,14 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { UserCircle, HouseSimple, Code, List, X } from "phosphor-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
-    { name: "Home", href: "#home", icon: <HouseSimple size={20} /> },
-    { name: "Projetos", href: "#projects", icon: <Code size={20} /> },
-    { name: "Contato", href: "#contact", icon: <UserCircle size={20} /> },
+    { name: "Home", href: "#home", icon: <HouseSimple weight="light" /> },
+    { name: "Projetos", href: "#projects", icon: <Code weight="light" /> },
+    { name: "Contato", href: "#contact", icon: <UserCircle weight="light" /> },
   ];
 
   const scrollToSection = (href: string) => {
@@ -19,64 +28,91 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-gray-950/10 backdrop-blur-lg shadow-xs z-50 p-4 h-14  ">
-      <div className="flex justify-between items-center w-full max-w-6xl mx-auto px-4 ">
-        {/* Botão do menu mobile (escondido em telas grandes) */}
-        <button
-          className="sm:hidden text-white "
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={28} /> : <List size={32} />}
-        </button>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-dark-900/80 backdrop-blur-lg shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex-shrink-0"
+          >
+            <span className="text-2xl font-bold gradient-text">&lt;SF/&gt;</span>
+          </motion.div>
 
-        {/* Menu desktop (centralizado em telas grandes) */}
-        <nav className="hidden sm:flex justify-center w-full text-white gap-6">
-          {menuItems.map((item, index) => (
-            <motion.a
-              key={index}
-              href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(item.href);
-              }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.85 }}
-              className="relative text-lg flex gap-1 font-light mx-[10px] lg:mx-[20px] text-gray-50 hover:text-rose-500 transition-all after:content-[''] after:w-0 after:h-[2px] after:bg-rose-500 after:absolute after:bottom-[-2px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
-            >
-              {item.icon}
-              {item.name}
-            </motion.a>
-          ))}
-        </nav>
-      </div>
+          {/* Desktop Menu */}
+          <div className="hidden sm:flex items-center space-x-8">
+            {menuItems.map((item, index) => (
+              <motion.a
+                key={index}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.href);
+                }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="group flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <span className="text-xl group-hover:text-rose-500 transition-colors duration-200">
+                  {item.icon}
+                </span>
+                <span className="relative">
+                  {item.name}
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rose-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
+                </span>
+              </motion.a>
+            ))}
+          </div>
 
-      {/* Menu mobile */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="md:hidden fixed top-14 left-0 w-full bg-black/85 backdrop-blur-lg text-white py-4 px-6 shadow-lg flex flex-col items-start gap-4"
-        >
-          {menuItems.map((item, index) => (
-            <motion.a
-              key={index}
-              href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(item.href);
-                setIsOpen(false);
-              }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="flex items-center gap-2 text-lg text-gray-300 hover:text-rose-500"
-            >
-              {item.icon}
-              {item.name}
-            </motion.a>
-          ))}
-        </motion.div>
-      )}
+          {/* Mobile Menu Button */}
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="sm:hidden text-gray-300 hover:text-white"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <List size={24} />}
+          </motion.button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="sm:hidden glass-card mt-2 py-4 px-4"
+          >
+            <div className="flex flex-col space-y-4">
+              {menuItems.map((item, index) => (
+                <motion.a
+                  key={index}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                    setIsOpen(false);
+                  }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg p-2 transition-all duration-200"
+                >
+                  <span className="text-xl text-rose-500">{item.icon}</span>
+                  <span>{item.name}</span>
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </nav>
     </header>
   );
 };

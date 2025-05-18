@@ -42,67 +42,69 @@ const Card = ({ project }: CardProps) => {
   }
 
   return (
-    <div className="relative w-full max-w-[700px] sm:max-w-[800px] h-auto flex flex-col rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-[1.00] hover:shadow-2xl mx-auto">
-      {/* container do card */}
-      <div className="relative z-10 flex flex-col h-full w-full bg-neutral-900/95 rounded-2xl overflow-hidden border border-neutral-800">
-        {/* Image */}
-        <div className="relative h-[180px] md:h-[420px] overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent opacity-40 z-10 group-hover:opacity-60 transition-all" />
+    <div className="relative w-full max-w-[700px] sm:max-w-[800px] h-auto flex flex-col rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-[1.02] mx-auto">
+      {/* Card container */}
+      <div className="relative z-10 flex flex-col h-full w-full bg-neutral-900/95 rounded-2xl overflow-hidden border border-neutral-800 shadow-xl">
+        {/* Image container */}
+        <div className="relative h-[220px] md:h-[320px] overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent opacity-60 z-10" />
 
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
+            className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105"
           />
 
-          {/* botoes de link externo */}
-          <div className="absolute inset-0 flex items-center justify-center gap-5 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {/* Action buttons */}
+          <div className="absolute inset-0 flex items-center justify-center gap-6 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-neutral-900/70 text-rose-400 p-3.5 rounded-full hover:bg-rose-500 hover:text-white transition-all duration-300 shadow-lg"
+              className="bg-white/10 backdrop-blur-md text-white p-4 rounded-full hover:bg-rose-500 transition-all duration-300 transform hover:scale-110"
               aria-label="View GitHub repository"
             >
-              <FaGithub size={22} />
+              <FaGithub size={24} />
             </a>
-            <a
-              href={project.site}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-neutral-900/70 backdrop-blur-md text-rose-400 p-3.5 rounded-full hover:bg-rose-500 hover:text-white transition-all duration-300 shadow-lg"
-              aria-label="Visit live site"
-            >
-              <FaExternalLinkAlt size={20} />
-            </a>
+            {project.site && (
+              <a
+                href={project.site}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 backdrop-blur-md text-white p-4 rounded-full hover:bg-rose-500 transition-all duration-300 transform hover:scale-110"
+                aria-label="Visit live site"
+              >
+                <FaExternalLinkAlt size={22} />
+              </a>
+            )}
           </div>
         </div>
 
-        {/* conteúdo de texto */}
-        <div className="flex-grow flex flex-col p-6 bg-neutral-900 border-t border-neutral-800/50">
-          <div className="mb-3">
-            <h3 className="text-2xl md:text-3xl font-bold text-white inline-block">
+        {/* Content */}
+        <div className="flex-grow flex flex-col p-8 bg-gradient-to-b from-neutral-900 to-neutral-900/95">
+          <div className="mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-white">
               {project.title}
-              <div className="h-[2px] bg-gradient-to-r from-rose-600 to-red-900 mt-1 w-0 group-hover:w-full transition-all duration-300" />
+              <div className="h-[2px] bg-gradient-to-r from-rose-500 to-rose-500/20 mt-2 w-16 group-hover:w-full transition-all duration-500 ease-out" />
             </h3>
           </div>
 
-          <p className="text-base text-gray-300 mb-5 line-clamp-3">
+          <p className="text-gray-300 mb-6 line-clamp-2 leading-relaxed">
             {project.description}
           </p>
 
           <div className="mt-auto">
-            <h4 className="text-xs uppercase tracking-wider text-gray-400 mb-2.5 font-medium">
+            <h4 className="text-xs uppercase tracking-wider text-gray-400 mb-3 font-medium">
               Tecnologias
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="inline-flex items-center gap-1.5 bg-neutral-800/80 backdrop-blur-sm px-3 py-1.5 rounded-lg text-sm border border-neutral-700/50 transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:bg-white/5"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm bg-white/5 border border-white/10 transition-all duration-300 hover:border-rose-500/50 hover:bg-rose-500/5"
                 >
                   <span className="text-xl">{technologyIcons[tech]}</span>
-                  <span className="text-gray-200 font-medium">{tech}</span>
+                  <span className="text-gray-300">{tech}</span>
                 </span>
               ))}
             </div>

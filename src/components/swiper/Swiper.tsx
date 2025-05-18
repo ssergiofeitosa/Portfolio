@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import {
   Navigation,
   Pagination,
@@ -21,13 +20,14 @@ const Swiperr = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024); // até 1024px é considerado "mobile"
+      setIsMobile(window.innerWidth < 1024);
     };
 
-    handleResize(); // chama uma vez
-    window.addEventListener("resize", handleResize); // escuta mudanças
+    handleResize();
+    window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   const projects = [
     {
       id: "item-1",
@@ -59,42 +59,23 @@ const Swiperr = () => {
       link: "https://github.com/ssergiofeitosa/Google-Form-Clone-React.git",
       site: "",
     },
-    {
-      id: "item-2",
-      image: "/quiz.png",
-      title: "Quiz App de História",
-      technologies: ["JavaScript", "TypeScript", "CSS"],
-      description:
-        "Um quiz interativo sobre história mundial, desenvolvido com JavaScript e TypeScript.",
-      link: "https://github.com/ssergiofeitosa/Projeto-Restic---Quiz.git",
-      site: "https://projeto-restic-quiz-historia.vercel.app",
-    },
-    {
-      id: "item-3",
-      image: "/googleformclone.png",
-      title: "Google Form Clone",
-      technologies: ["React", "TypeScript", "TailwindCSS"],
-      description:
-        "Um clone do Google Forms desenvolvido com React e TailwindCSS.",
-      link: "https://github.com/ssergiofeitosa/Google-Form-Clone-React.git",
-      site: "",
-    },
   ];
+
   return (
     <div
       id="projects"
-      className="flex h-full w-full items-center justify-center pt-20 px-4 bg-transparent"
+      className="flex min-h-screen w-full items-center justify-center py-20 px-4 bg-transparent"
     >
-      <div className="w-full max-w-[85%] flex flex-col items-center">
-        <div className="container mx-auto text-center mb-8 w-[85%] lg:w-[70%]">
-          <h2 className="text-white text-5xl md:text-4xl lg:text-5xl font-bold items-center mb-2">
+      <div className="w-full max-w-[90%] flex flex-col items-center">
+        <div className="container mx-auto text-center mb-16">
+          <h2 className="text-5xl font-bold text-white mb-4">
             Projetos
+            <div className="h-1 bg-gradient-to-r from-transparent via-rose-500 to-transparent w-32 mx-auto mt-4"></div>
           </h2>
-          <div className="h-1 bg-gradient-to-r from-transparent via-rose-500 to-transparent w-48 mx-auto mb-8"></div>
-          <p className="text-white text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
             Esses projetos foram desenvolvidos como parte do meu processo de
             aprendizado, e cada um deles representou uma oportunidade prática de
-            explorar novas tecnologias e ferramentas.{" "}
+            explorar novas tecnologias e ferramentas.
           </p>
         </div>
 
@@ -103,28 +84,28 @@ const Swiperr = () => {
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
-          loop={!isMobile} // <-- apenas ativa o loop se NÃO for mobile
+          loop={!isMobile}
           coverflowEffect={{
-            rotate: 3,
+            rotate: 5,
             stretch: 0,
-            depth: 120,
-            modifier: 3.2,
-            slideShadows: true,
+            depth: 100,
+            modifier: 2.5,
+            slideShadows: false,
           }}
-          spaceBetween={50}
+          spaceBetween={30}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
           breakpoints={{
-            0: { slidesPerView: 1 },
             640: { slidesPerView: 1 },
-            768: { slidesPerView: 1 },
-            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2.5 },
+            1280: { slidesPerView: 3 },
           }}
-          className="w-full h-full px-2"
+          className="w-full h-full px-4"
         >
           {projects.map((project) => (
-            <SwiperSlide key={project.id} className="flex justify-center px-2">
+            <SwiperSlide key={project.id} className="py-8">
               <Card project={project} />
             </SwiperSlide>
           ))}

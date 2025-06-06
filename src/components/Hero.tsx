@@ -110,7 +110,7 @@ const Hero = () => {
                 },
                 {
                   icon: <LinkedinLogo size={32} weight="light" />,
-                  href: "www.linkedin.com/in/sérgio-feitosa-874118210",
+                  href: "https://www.linkedin.com/in/s%C3%A9rgio-feitosa-874118210/",
                   label: "LinkedIn",
                 },
                 {
